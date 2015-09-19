@@ -11,36 +11,6 @@
     "outports": {},
     "groups": [],
     "processes": {
-        "LOADBANG": {
-            "component": "core/Kick",
-            "metadata": {
-                "label": "LOADBANG",
-                "x": 0,
-                "y": 36,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "dom/GetElement_ur161": {
-            "component": "dom/GetElement",
-            "metadata": {
-                "label": "dom/GetElement",
-                "x": 180,
-                "y": 180,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "vflo/v/ExternalWindow_8qkyj": {
-            "component": "vflo/v/ExternalWindow",
-            "metadata": {
-                "label": "vflo/v/ExternalWindow",
-                "x": 180,
-                "y": 36,
-                "width": 72,
-                "height": 72
-            }
-        },
         "vflo/v/set_up_window_meezn": {
             "component": "vflo/v/set_up_window",
             "metadata": {
@@ -51,12 +21,32 @@
                 "height": 72
             }
         },
-        "core/Output_exxtp": {
-            "component": "core/Output",
+        "core/Kick_v06v7": {
+            "component": "core/Kick",
             "metadata": {
-                "label": "core/Output",
-                "x": 468,
-                "y": 72,
+                "label": "core/Kick",
+                "x": -72,
+                "y": 36,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "vflo/v/GetPrimaryWindow_ntopi": {
+            "component": "vflo/v/GetPrimaryWindow",
+            "metadata": {
+                "label": "vflo/v/GetPrimaryWindow",
+                "x": 180,
+                "y": 36,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Repeat_dprq5": {
+            "component": "core/Repeat",
+            "metadata": {
+                "label": "core/Repeat",
+                "x": -72,
+                "y": 180,
                 "width": 72,
                 "height": 72
             }
@@ -65,23 +55,36 @@
     "connections": [
         {
             "src": {
-                "process": "LOADBANG",
+                "process": "core/Kick_v06v7",
                 "port": "out"
             },
             "tgt": {
-                "process": "dom/GetElement_ur161",
-                "port": "in"
+                "process": "vflo/v/GetPrimaryWindow_ntopi",
+                "port": "bang"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "vflo/v/GetPrimaryWindow_ntopi",
+                "port": "window"
+            },
+            "tgt": {
+                "process": "vflo/v/set_up_window_meezn",
+                "port": "window"
             },
             "metadata": {}
         },
         {
             "src": {
-                "process": "LOADBANG",
+                "process": "core/Kick_v06v7",
                 "port": "out"
             },
             "tgt": {
-                "process": "vflo/v/ExternalWindow_8qkyj",
-                "port": "bang"
+                "process": "core/Repeat_dprq5",
+                "port": "in"
             },
             "metadata": {
                 "route": 0
@@ -89,33 +92,11 @@
         },
         {
             "src": {
-                "process": "dom/GetElement_ur161",
-                "port": "element"
+                "process": "core/Repeat_dprq5",
+                "port": "out"
             },
             "tgt": {
-                "process": "vflo/v/set_up_window_meezn",
-                "port": "window"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "vflo/v/ExternalWindow_8qkyj",
-                "port": "window"
-            },
-            "tgt": {
-                "process": "vflo/v/set_up_window_meezn",
-                "port": "window"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "vflo/v/set_up_window_meezn",
-                "port": "window"
-            },
-            "tgt": {
-                "process": "core/Output_exxtp",
+                "process": "core/Kick_v06v7",
                 "port": "in"
             },
             "metadata": {}
@@ -123,15 +104,8 @@
         {
             "data": "LOADBANG",
             "tgt": {
-                "process": "LOADBANG",
+                "process": "core/Kick_v06v7",
                 "port": "data"
-            }
-        },
-        {
-            "data": "window",
-            "tgt": {
-                "process": "dom/GetElement_ur161",
-                "port": "selector"
             }
         }
     ]
