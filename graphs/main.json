@@ -11,16 +11,6 @@
     "outports": {},
     "groups": [],
     "processes": {
-        "vflo/v/set_up_window_meezn": {
-            "component": "vflo/v/set_up_window",
-            "metadata": {
-                "label": "vflo/v/set_up_window",
-                "x": 288,
-                "y": 36,
-                "width": 72,
-                "height": 72
-            }
-        },
         "core/Kick_v06v7": {
             "component": "core/Kick",
             "metadata": {
@@ -31,11 +21,21 @@
                 "height": 72
             }
         },
-        "vflo/v/GetPrimaryWindow_jmyiz": {
-            "component": "vflo/v/GetPrimaryWindow",
+        "vflo/set_up_window_ruvyv": {
+            "component": "vflo/set_up_window",
             "metadata": {
-                "label": "vflo/v/GetPrimaryWindow",
-                "x": 144,
+                "label": "vflo/set_up_window",
+                "x": 324,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "vflo/PrimaryWindow_60i16": {
+            "component": "vflo/PrimaryWindow",
+            "metadata": {
+                "label": "vflo/PrimaryWindow",
+                "x": 180,
                 "y": 72,
                 "width": 72,
                 "height": 72
@@ -49,20 +49,18 @@
                 "port": "out"
             },
             "tgt": {
-                "process": "vflo/v/GetPrimaryWindow_jmyiz",
+                "process": "vflo/PrimaryWindow_60i16",
                 "port": "bang"
             },
-            "metadata": {
-                "route": 0
-            }
+            "metadata": {}
         },
         {
             "src": {
-                "process": "vflo/v/GetPrimaryWindow_jmyiz",
+                "process": "vflo/PrimaryWindow_60i16",
                 "port": "window"
             },
             "tgt": {
-                "process": "vflo/v/set_up_window_meezn",
+                "process": "vflo/set_up_window_ruvyv",
                 "port": "window"
             },
             "metadata": {}
