@@ -16,27 +16,17 @@
             "metadata": {
                 "label": "core/Kick",
                 "x": 36,
-                "y": 72,
+                "y": 36,
                 "width": 72,
                 "height": 72
             }
         },
-        "vflo/set_up_window_ruvyv": {
-            "component": "vflo/set_up_window",
+        "core/Output_ie3xy": {
+            "component": "core/Output",
             "metadata": {
-                "label": "vflo/set_up_window",
-                "x": 324,
-                "y": 72,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "vflo/PrimaryWindow_60i16": {
-            "component": "vflo/PrimaryWindow",
-            "metadata": {
-                "label": "vflo/PrimaryWindow",
-                "x": 180,
-                "y": 72,
+                "label": "core/Output",
+                "x": 144,
+                "y": 36,
                 "width": 72,
                 "height": 72
             }
@@ -49,21 +39,12 @@
                 "port": "out"
             },
             "tgt": {
-                "process": "vflo/PrimaryWindow_60i16",
-                "port": "bang"
+                "process": "core/Output_ie3xy",
+                "port": "in"
             },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "vflo/PrimaryWindow_60i16",
-                "port": "window"
-            },
-            "tgt": {
-                "process": "vflo/set_up_window_ruvyv",
-                "port": "window"
-            },
-            "metadata": {}
+            "metadata": {
+                "route": null
+            }
         },
         {
             "data": "LOADBANG",
