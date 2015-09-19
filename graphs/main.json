@@ -15,7 +15,7 @@
             "component": "core/Kick",
             "metadata": {
                 "label": "LOADBANG",
-                "x": 36,
+                "x": 0,
                 "y": 36,
                 "width": 72,
                 "height": 72
@@ -45,7 +45,17 @@
             "component": "vflo/v/set_up_window",
             "metadata": {
                 "label": "vflo/v/set_up_window",
-                "x": 288,
+                "x": 360,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Output_exxtp": {
+            "component": "core/Output",
+            "metadata": {
+                "label": "core/Output",
+                "x": 468,
                 "y": 72,
                 "width": 72,
                 "height": 72
@@ -96,6 +106,17 @@
             "tgt": {
                 "process": "vflo/v/set_up_window_meezn",
                 "port": "window"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "vflo/v/set_up_window_meezn",
+                "port": "window"
+            },
+            "tgt": {
+                "process": "core/Output_exxtp",
+                "port": "in"
             },
             "metadata": {}
         },
