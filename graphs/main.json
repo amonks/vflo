@@ -11,16 +11,6 @@
     "outports": {},
     "groups": [],
     "processes": {
-        "core/Kick_v06v7": {
-            "component": "core/Kick",
-            "metadata": {
-                "label": "core/Kick",
-                "x": 36,
-                "y": 36,
-                "width": 72,
-                "height": 72
-            }
-        },
         "core/Output_ie3xy": {
             "component": "core/Output",
             "metadata": {
@@ -30,26 +20,34 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "core/Kick_1qeie": {
+            "component": "core/Kick",
+            "metadata": {
+                "label": "core/Kick",
+                "x": 36,
+                "y": 36,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [
         {
             "src": {
-                "process": "core/Kick_v06v7",
+                "process": "core/Kick_1qeie",
                 "port": "out"
             },
             "tgt": {
                 "process": "core/Output_ie3xy",
                 "port": "in"
             },
-            "metadata": {
-                "route": null
-            }
+            "metadata": {}
         },
         {
-            "data": "LOADBANG",
+            "data": "bang",
             "tgt": {
-                "process": "core/Kick_v06v7",
+                "process": "core/Kick_1qeie",
                 "port": "data"
             }
         }
