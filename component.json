@@ -2,7 +2,8 @@
   "private": true,
   "main": "index.js",
   "dependencies": {
-    "noflo/noflo": "*"
+    "noflo/noflo": "*",
+    "noflo/noflo-core": "*"
   },
   "noflo": {
     "graphs": {
