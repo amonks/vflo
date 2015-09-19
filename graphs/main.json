@@ -21,10 +21,10 @@
                 "height": 72
             }
         },
-        "core/Kick_1qeie": {
-            "component": "core/Kick",
+        "core/Repeat_ebeek": {
+            "component": "core/Repeat",
             "metadata": {
-                "label": "core/Kick",
+                "label": "core/Repeat",
                 "x": 36,
                 "y": 36,
                 "width": 72,
@@ -35,7 +35,7 @@
     "connections": [
         {
             "src": {
-                "process": "core/Kick_1qeie",
+                "process": "core/Repeat_ebeek",
                 "port": "out"
             },
             "tgt": {
@@ -47,8 +47,8 @@
         {
             "data": "bang",
             "tgt": {
-                "process": "core/Kick_1qeie",
-                "port": "data"
+                "process": "core/Repeat_ebeek",
+                "port": "in"
             }
         }
     ]
