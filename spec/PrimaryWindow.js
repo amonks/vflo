@@ -7,6 +7,7 @@ exports.getComponent = function () {
     if (event !== 'data') {
       return;
     }
+    console.log('payload:', payload);
     // Do something with the packet, then
     c.outPorts.window.send(window);
   });
