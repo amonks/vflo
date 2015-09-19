@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>main</title>
+    <script src="noflo.js"></script>
+  </head>
+  <body>
+    <html>
+  <head>
+  </head>
+  <body>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</html>
+    <script>
+      var noflo = require('noflo');
+      noflo.graph.loadJSON(require('undefined/graphs/main.json'), function (graph) {
+        graph.baseDir = '/';
+        noflo.createNetwork(graph, function (network) {
+          console.log('main is running!');
+        });
+      });
+    </script>
+  </body>
+</html>
