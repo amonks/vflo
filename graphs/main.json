@@ -30,6 +30,16 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "core/Drop_39rwu": {
+            "component": "core/Drop",
+            "metadata": {
+                "label": "core/Drop",
+                "x": 288,
+                "y": 36,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [
@@ -40,6 +50,17 @@
             },
             "tgt": {
                 "process": "core/Output_ie3xy",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/Output_ie3xy",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Drop_39rwu",
                 "port": "in"
             },
             "metadata": {}
